@@ -1,6 +1,8 @@
 {
     "name": "dframe/dframe-demo",
     "description": "Demo application dframe",
+    "license": "MIT",
+    "keywords": ["dframe", "demo", "framework"],
     "type": "project",
     "autoload": {
         "psr-4": {"": "app/"}
