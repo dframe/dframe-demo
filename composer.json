@@ -1,0 +1,13 @@
+{
+    "name": "dframe/dframe-demo",
+    "description": "Demo application dframe",
+    "type": "project",
+    "autoload": {
+        "psr-4": {"": "app/"}
+    },
+    
+    "require": {
+        "dframe/dframe": "^3.24.0",
+        "dframe/database": "^1.1.0"
+    }
+}
