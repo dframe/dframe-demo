@@ -2,7 +2,7 @@
 return array(
 	'https' => false,
     'NAME_CONTROLLER' => 'page',
-    'NAME_MODEL' => 'index',
+    'NAME_METHOD' => 'index',
     'publicWeb' => '',
     'assetsPath' => '',
 
