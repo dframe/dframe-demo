@@ -11,11 +11,6 @@ return array(
         'task=page&action=show&pageId=[pageId]'
     ),
     
-    'error/404' => array(
-    	'error/404', 
-    	'task=page&action=404'
-    ),
-
     'default' => array(
         '[task]/[action]/[params]',
         'task=[task]&action=[action]',
@@ -23,6 +18,14 @@ return array(
         '_params' => array(
             '[name]/[value]/', 
             '[name]=[value]'
-            )
-        ),       
+        )
+    ),    
+
+    'error/:code' => array(
+    	'error/[code]/', 
+    	'task=page&action=error&type=[code]',
+        'args' => array(
+            'code' => '[code]'
+        )
+    )
 );
