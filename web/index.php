@@ -9,6 +9,5 @@
 
 include_once '../vendor/autoload.php';
 include_once '../app/Bootstrap.php';
-
 $core = new \Dframe\Core();
 $core->run();
