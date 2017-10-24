@@ -9,7 +9,7 @@
     },
     
     "require": {
-        "dframe/dframe": "dev-master",
+        "dframe/dframe": "^1.0",
         "dframe/database": "^1.1.0"
     }
 }
