@@ -9,6 +9,7 @@
     },
     
     "require": {
-        "dframe/dframe": "^3.26.0"
+        "dframe/dframe": "^3.26.0",
+        "dframe/database": "^1.3.0"
     }
 }
