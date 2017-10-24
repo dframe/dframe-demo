@@ -3,7 +3,7 @@ namespace Controller;
 use Dframe\Controller;
 use Dframe\Config;
 
-class pageController extends Controller 
+class PageController extends Controller 
 {
     /** 
      * Dynamiczny loader stron wykrywa akcje jako plik i stara sie go za ładować
@@ -17,7 +17,7 @@ class pageController extends Controller
         $smartyConfig = Config::load('view/smarty');
         $view = $this->loadView('index');
 
-        $patchController = $smartyConfig->get('setTemplateDir', appDir.'../app/View/templates').'/page/'.htmlspecialchars($_GET['action']).$smartyConfig->get('fileExtension', '.html.php');
+        $patchController = $smartyConfig->get('setTemplateDir', APP_DIR.'View/templates').'/page/'.htmlspecialchars($_GET['action']).$smartyConfig->get('fileExtension', '.html.php');
         
         if(!file_exists($patchController)){
         	$this->router->redirect('page/index');
