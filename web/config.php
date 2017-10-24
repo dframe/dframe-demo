@@ -20,7 +20,7 @@ if(isset($_SERVER['REMOTE_ADDR']) AND in_array($_SERVER['REMOTE_ADDR'], $debugAl
 }
 
 # Application configuration
-define('appDir', dirname(__FILE__).'/');
+define('APP_DIR', dirname(__FILE__).'/../app/');
 
 # Website configuration
 define('VERSION', "Dframe"); # Version aplication
