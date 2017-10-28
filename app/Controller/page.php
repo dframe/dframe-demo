@@ -37,4 +37,10 @@ class PageController extends Controller
         return $view->render('index'); 
     }
 
+    public function json() 
+    {
+        $view = $this->loadView('index');
+        return $view->renderJSON(array('return' => '1')); 
+    }
+
 }
