@@ -1,6 +1,6 @@
 <?php
 return array(
-	'https' => false,
+    'https' => false,
     'NAME_CONTROLLER' => 'page',
     'NAME_METHOD' => 'index',
     'publicWeb' => '',
@@ -22,8 +22,8 @@ return array(
     ),    
 
     'error/:code' => array(
-    	'error/[code]/', 
-    	'task=page&action=error&type=[code]',
+        'error/[code]/', 
+        'task=page&action=error&type=[code]',
         'args' => array(
             'code' => '[code]'
         )

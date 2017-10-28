@@ -7,6 +7,7 @@ namespace Controller;
  * @abstract
  */
 
-abstract class Controller extends \Dframe\Controller {
+abstract class Controller extends \Dframe\Controller
+{
 
 }
