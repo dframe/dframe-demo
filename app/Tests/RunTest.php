@@ -19,18 +19,14 @@ class RunTest extends \PHPUnit\Framework\TestCase
 
     public function testCreateController()
     {
+        $bootstrap = new \Bootstrap();
+        $bootstrap->router = new \Dframe\Router();
 
-        $testController = new TestController();
-        $this->assertEquals('Hello World', $testController->testHelloWorld());
+        $run = new \Dframe\Loader($bootstrap);
+        $page = $run->loadController('page');
+
+        $this->assertEquals('{"return":"1"}', $page->json());
+
     }
 
-}
-
-class TestController extends \Dframe\Controller
-{
-
-    public function testHelloWorld()
-    {
-        return 'Hello World';
-    }
 }
