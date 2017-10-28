@@ -25,7 +25,7 @@ class PageController extends Controller
             return $this->router->redirect('page/index');
         }
         
-        return $view->render('page/'.htmlspecialchars($_GET['action']));
+        return $view->fetch('page/'.htmlspecialchars($_GET['action']));
         
     }
 
@@ -34,6 +34,7 @@ class PageController extends Controller
         $view = $this->loadView('index');
 
         $view->assign('contents', 'Example assign');
-        $view->render('index');
+        return $view->render('index'); 
     }
+
 }
