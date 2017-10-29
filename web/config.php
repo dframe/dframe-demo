@@ -15,7 +15,7 @@ if (isset($_SERVER['REMOTE_ADDR']) AND in_array($_SERVER['REMOTE_ADDR'], $debugA
     ini_set("display_errors", "off"); // Debug setings
     error_reporting(E_ALL);           // Debug setings
     define('MOD_REWRITE', true);     // Mod rewrite (ex. task=page&action=login -> page/login )
-    define('setErrorLog', fasle);     // DB show error
+    define('setErrorLog', false);     // DB show error
 
 }
 

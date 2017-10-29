@@ -1,14 +1,14 @@
 <?php
 namespace Tests;
-use PHPUnit_Framework_Constraint_IsType as PHPUnit_IsType;
+ini_set('session.use_cookies', 0);
+
+session_start();
 
 // backward compatibility
 if (!class_exists('\PHPUnit\Framework\TestCase') AND class_exists('\PHPUnit_Framework_TestCase')) {
     class_alias('\PHPUnit_Framework_TestCase', '\PHPUnit\Framework\TestCase');
 }
  
-session_start();
-
 $autoloader = include dirname(__DIR__) . '../../vendor/autoload.php';
 
 include_once dirname(__FILE__).'/../Bootstrap.php';
