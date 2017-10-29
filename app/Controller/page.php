@@ -9,7 +9,6 @@ class PageController extends Controller
     /** 
      * Dynamiczny loader stron wykrywa akcje jako plik i stara sie go za ładować
      */
-
     public function init()
     {
         if(method_exists($this, $_GET['action'])) { // Skip dynamic page if method in controller exist
