@@ -7,10 +7,18 @@ return array(
     'assetsPath' => '',
 
     'documents/:pageId' => array(
-        'documents/[pageId]', 
+        'documents/[pageId]/', 
         'task=page&action=show&pageId=[pageId]'
     ),
-    
+
+    'error/:code' => array(
+        'error/[code]/', 
+        'task=page&action=error&type=[code]',
+        'args' => array(
+            'code' => '[code]'
+        )
+    ),
+
     'default' => array(
         '[task]/[action]/[params]',
         'task=[task]&action=[action]',
@@ -21,11 +29,5 @@ return array(
         )
     ),    
 
-    'error/:code' => array(
-        'error/[code]/', 
-        'task=page&action=error&type=[code]',
-        'args' => array(
-            'code' => '[code]'
-        )
-    )
+
 );
