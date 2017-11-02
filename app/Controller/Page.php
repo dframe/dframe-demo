@@ -1,10 +1,9 @@
 <?php
 namespace Controller;
-use Dframe\Controller;
 use Dframe\Config;
 use Dframe\Router\Response;
 
-class PageController extends Controller
+class PageController extends \Controller\Controller
 {
     /** 
      * Dynamiczny loader stron wykrywa akcje jako plik i stara sie go za ładować
@@ -16,7 +15,7 @@ class PageController extends Controller
         }
 
         $smartyConfig = Config::load('view/smarty');
-        $view = $this->loadView('index');
+        $view = $this->loadView('Index');
 
         $patchController = $smartyConfig->get('setTemplateDir', APP_DIR.'View/templates').'/page/'.htmlspecialchars($_GET['action']).$smartyConfig->get('fileExtension', '.html.php');
         
@@ -30,7 +29,7 @@ class PageController extends Controller
 
     public function error()
     {
-        $view = $this->loadView('index');
+        $view = $this->loadView('Index');
 
         $errorsTypes = array('404');
         if(!isset($_GET['type']) OR !in_array($_GET['type'], $errorsTypes)){
@@ -42,7 +41,7 @@ class PageController extends Controller
 
     public function index() 
     {
-        $view = $this->loadView('index');
+        $view = $this->loadView('Index');
         $view->assign('contents', 'Example assign');
         return $view->render('index');
     }
@@ -50,7 +49,7 @@ class PageController extends Controller
 
     public function responseExample() 
     {
-        $view = $this->loadView('index');
+        $view = $this->loadView('Index');
         $view->assign('contents', 'Example assign');
         return Response::create($view->fetch('index'));
     }
@@ -58,7 +57,7 @@ class PageController extends Controller
 
     public function json() 
     {
-        $view = $this->loadView('index');
+        $view = $this->loadView('Index');
         return $view->renderJSON(array('return' => '1')); 
     }
 
