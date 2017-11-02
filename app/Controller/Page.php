@@ -23,7 +23,7 @@ class PageController extends \Controller\Controller
             return $this->router->redirect('page/index');
         }
 
-        return Response::create($view->fetch('page/'.htmlspecialchars($_GET['action'])));
+        return Response::create($view->fetch('page/'.htmlspecialchars($_GET['action'])))->display();
         
     }
 
@@ -35,7 +35,8 @@ class PageController extends \Controller\Controller
         if(!isset($_GET['type']) OR !in_array($_GET['type'], $errorsTypes)){
             return $this->router->redirect('page/index');
         }
-        return Response::create($view->fetch('errors/'.$_GET['type']))->status('404');
+
+        return Response::create($view->fetch('errors/'.$_GET['type']))->status($_GET['type'])->display();
         
     }
 
@@ -43,6 +44,7 @@ class PageController extends \Controller\Controller
     {
         $view = $this->loadView('Index');
         $view->assign('contents', 'Example assign');
+
         return $view->render('index');
     }
 
@@ -51,13 +53,15 @@ class PageController extends \Controller\Controller
     {
         $view = $this->loadView('Index');
         $view->assign('contents', 'Example assign');
-        return Response::create($view->fetch('index'));
+
+        return Response::create($view->fetch('index'))->display();
     }
 
 
     public function json() 
     {
         $view = $this->loadView('Index');
+        
         return $view->renderJSON(array('return' => '1')); 
     }
 
