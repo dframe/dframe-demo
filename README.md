@@ -12,8 +12,8 @@ https://packagist.org/packages/dframe/dframe-demo
 
 Or use
 
-`composer create-project dframe/dframe-demo`
+`composer create-project dframe/dframe-demo project_name`
 
 for developer 
 
-`composer create-project dframe/dframe-demo dev-master`
+`composer create-project dframe/dframe-demo --stability=dev project_name_dev`
