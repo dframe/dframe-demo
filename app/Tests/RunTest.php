@@ -10,12 +10,12 @@ if (!class_exists('\PHPUnit\Framework\TestCase') AND class_exists('\PHPUnit_Fram
 }
  
 $autoloader = include dirname(__DIR__) . '../../vendor/autoload.php';
-
 include_once dirname(__FILE__).'/../Bootstrap.php';
 include_once dirname(__FILE__).'/../../web/config.php';
 
 class RunTest extends \PHPUnit\Framework\TestCase
 {
+
 
     public function testCreateController()
     {
@@ -25,7 +25,10 @@ class RunTest extends \PHPUnit\Framework\TestCase
         $run = new \Dframe\Loader($bootstrap);
         $page = $run->loadController('Page');
 
-        $this->assertEquals('{"return":"1"}', $page->json());
+        ob_start();
+        $page->json();
+        $output = ob_get_clean();
+        $this->assertEquals('{"return":"1"}', $output);
 
     }
 
