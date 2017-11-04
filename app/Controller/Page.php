@@ -23,7 +23,7 @@ class PageController extends \Controller\Controller
             return $this->router->redirect('page/index');
         }
 
-        return Response::create($view->fetch('page/'.htmlspecialchars($_GET['action'])))->display();
+        return Response::create($view->fetch('page/'.htmlspecialchars($_GET['action'])));
         
     }
 
@@ -36,7 +36,7 @@ class PageController extends \Controller\Controller
             return $this->router->redirect('page/index');
         }
 
-        return Response::create($view->fetch('errors/'.$_GET['type']))->status($_GET['type'])->display();
+        return Response::create($view->fetch('errors/'.$_GET['type']))->status($_GET['type']);
         
     }
 
