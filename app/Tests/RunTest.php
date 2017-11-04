@@ -1,4 +1,11 @@
 <?php
+/**
+ * Project Name
+ * Copyright (c) Firstname Lastname
+ *
+ * @license http://yourLicenceUrl/ (Licence Name)
+ */
+
 namespace Tests;
 ini_set('session.use_cookies', 0);
 
@@ -10,8 +17,14 @@ if (!class_exists('\PHPUnit\Framework\TestCase') AND class_exists('\PHPUnit_Fram
 }
  
 $autoloader = include dirname(__DIR__) . '../../vendor/autoload.php';
-include_once dirname(__FILE__).'/../Bootstrap.php';
-include_once dirname(__FILE__).'/../../web/config.php';
+require_once dirname(__FILE__).'/../Bootstrap.php';
+require_once dirname(__FILE__).'/../../web/config.php';
+
+/**
+ * Testing project.
+ *
+ * @author Sławek Kaleta <slaszka@gmail.com>
+ */
 
 class RunTest extends \PHPUnit\Framework\TestCase
 {
