@@ -1,7 +1,20 @@
 <?php
+/**
+ * Project Name
+ * Copyright (c) Firstname Lastname
+ *
+ * @license http://yourLicenceUrl/ (Licence Name)
+ */
+
 namespace Controller;
 use Dframe\Config;
 use Dframe\Router\Response;
+
+/**
+ * Here is a description of what this file is for.
+ *
+ * @author First Name <adres@email>
+ */
 
 class PageController extends \Controller\Controller
 {
@@ -10,7 +23,7 @@ class PageController extends \Controller\Controller
      */
     public function init()
     {
-        if(method_exists($this, $_GET['action'])) { // Skip dynamic page if method in controller exist
+        if (method_exists($this, $_GET['action'])) { // Skip dynamic page if method in controller exist
             return;
         }
 
@@ -32,7 +45,7 @@ class PageController extends \Controller\Controller
         $view = $this->loadView('Index');
 
         $errorsTypes = array('404');
-        if(!isset($_GET['type']) OR !in_array($_GET['type'], $errorsTypes)){
+        if (!isset($_GET['type']) OR !in_array($_GET['type'], $errorsTypes)) {
             return $this->router->redirect('page/index');
         }
 

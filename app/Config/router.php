@@ -1,9 +1,10 @@
 <?php
+
 return array(
     'https' => false,
-    'NAME_CONTROLLER' => 'page',
-    'NAME_METHOD' => 'index',
-    'publicWeb' => '',
+    'NAME_CONTROLLER' => 'page',    // Default Controller for router
+    'NAME_METHOD' => 'index',       // Default Action for router
+    'publicWeb' => '',              // Path for public web (web or public_html)
     'assetsPath' => '',
 
     'documents/:pageId' => array(
@@ -28,6 +29,5 @@ return array(
             '[name]=[value]'
         )
     ),    
-
 
 );
