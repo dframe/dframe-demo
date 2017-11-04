@@ -54,15 +54,13 @@ class PageController extends \Controller\Controller
         $view = $this->loadView('Index');
         $view->assign('contents', 'Example assign');
 
-        return Response::create($view->fetch('index'))->display();
+        return Response::create($view->fetch('index'));
     }
 
 
     public function json() 
     {
-        $view = $this->loadView('Index');
-        
-        return $view->renderJSON(array('return' => '1')); 
+        return Response::renderJSON(array('return' => '1')); 
     }
 
 }

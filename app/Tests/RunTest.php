@@ -24,11 +24,8 @@ class RunTest extends \PHPUnit\Framework\TestCase
 
         $run = new \Dframe\Loader($bootstrap);
         $page = $run->loadController('Page');
-
-        ob_start();
-        $page->json();
-        $output = ob_get_clean();
-        $this->assertEquals('{"return":"1"}', $output);
+        
+        $this->assertEquals('{"return":"1"}', $page->json()->getBody());
 
     }
 
