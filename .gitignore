@@ -1,4 +1,11 @@
+app/View/templates_c/*
+app/View/cache/*
+web/assets/*
+vendor
 .project
 composer.lock
-vendor
-app/View/templates_c
+
+
+!app/View/templates_c/.gitkeep
+!app/View/cache/.gitkeep
+!web/assets/.gitkeep
