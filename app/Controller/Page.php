@@ -19,25 +19,11 @@ use Dframe\Router\Response;
 class PageController extends \Controller\Controller
 {
     /** 
-     * Dynamiczny loader stron wykrywa akcje jako plik i stara sie go za ładować
+     * Local __construct()
      */
     public function init()
     {
-        if (method_exists($this, $_GET['action'])) { // Skip dynamic page if method in controller exist
-            return;
-        }
 
-        $smartyConfig = Config::load('view/smarty');
-        $view = $this->loadView('Index');
-
-        $patchController = $smartyConfig->get('setTemplateDir', APP_DIR.'View/templates').'/page/'.htmlspecialchars($_GET['action']).$smartyConfig->get('fileExtension', '.html.php');
-        
-        if (!file_exists($patchController)) {  
-            return $this->router->redirect('page/index');
-        }
-
-        return Response::create($view->fetch('page/'.htmlspecialchars($_GET['action'])));
-        
     }
 
     public function error()
@@ -76,4 +62,32 @@ class PageController extends \Controller\Controller
         return Response::renderJSON(array('return' => '1')); 
     }
 
+    /**
+     * Catch-all method for requests that can't be matched.
+     *
+     * @param  string    $method
+     * @param  array     $parameters
+     * @return Response
+     */
+
+    public function __call($method, $test)
+    {
+
+        if (method_exists($this, $_GET['action'])) { // Skip dynamic page if method in controller exist
+            return;
+        }
+
+        $smartyConfig = Config::load('view/smarty');
+        $view = $this->loadView('Index');
+
+        $patchController = $smartyConfig->get('setTemplateDir', APP_DIR.'View/templates').'/page/'.htmlspecialchars($_GET['action']).$smartyConfig->get('fileExtension', '.html.php');
+        
+        if (!file_exists($patchController)) {  
+            return $this->router->redirect('page/index');
+        }
+
+        return Response::create($view->fetch('page/'.htmlspecialchars($_GET['action'])));
+        
+    }
+    
 }
