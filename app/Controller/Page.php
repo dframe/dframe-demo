@@ -19,7 +19,7 @@ use Dframe\Router\Response;
 class PageController extends \Controller\Controller
 {
     /** 
-     * Local __construct()
+     * initial function call working like __construct
      */
     public function init()
     {
@@ -72,10 +72,6 @@ class PageController extends \Controller\Controller
 
     public function __call($method, $test)
     {
-
-        if (method_exists($this, $_GET['action'])) { // Skip dynamic page if method in controller exist
-            return;
-        }
 
         $smartyConfig = Config::load('view/smarty');
         $view = $this->loadView('Index');
