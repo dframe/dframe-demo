@@ -1,6 +1,6 @@
 {
     "name": "dframe/dframe-demo",
-    "description": "Demo application dframe",
+    "description": "It is a simple demo website based on Dframeframework",
     "license": "MIT",
     "keywords": ["dframe", "demo", "framework", "website", "application"],
     "type": "project",
