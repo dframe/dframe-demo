@@ -8,7 +8,7 @@
         "psr-4": {"": "app/"}
     },
     "require": {
-        "dframe/dframe": "dev-master",
+        "dframe/dframe": "^2.7.0",
         "dframe/database": "^1.3.0",
         "smarty/smarty": "^3.1"
     },
