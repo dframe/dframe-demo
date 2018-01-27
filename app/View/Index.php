@@ -1,7 +1,7 @@
 <?php
 namespace View;
 
-class indexView extends \View\View
+class IndexView extends \View\View
 {
     public function init()
     {
