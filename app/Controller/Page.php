@@ -65,8 +65,8 @@ class PageController extends \Controller\Controller
     /**
      * Catch-all method for requests that can't be matched.
      *
-     * @param  string    $method
-     * @param  array     $parameters
+     * @param  string $method
+     * @param  array  $parameters
      * @return Response
      */
 

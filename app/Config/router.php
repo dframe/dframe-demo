@@ -7,13 +7,13 @@ return array(
     'publicWeb' => '',              // Path for public web (web or public_html)
 
     'assets' => array(
-	    'minifyCssEnabled' => true,
-	    'minifyJsEnabled' => true,
-	    'assetsDir' => 'assets',
-	    'assetsPath' => APP_DIR.'View/',
-	    'cacheDir' => 'cache',
-	    'cachePath' => APP_DIR.'../web/',
-	    'cacheUrl' => HTTP_HOST.'/',
+        'minifyCssEnabled' => true,
+        'minifyJsEnabled' => true,
+        'assetsDir' => 'assets',
+        'assetsPath' => APP_DIR.'View/',
+        'cacheDir' => 'cache',
+        'cachePath' => APP_DIR.'../web/',
+        'cacheUrl' => HTTP_HOST.'/',
     ),
 
     'routes' => array(
