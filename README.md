@@ -8,7 +8,7 @@
 **Documentation available at** [https://dframeframework.com](https://dframeframework.com/pl/page/index)
 
 Language
-[Polish](https://dframeframework.com/pl/page/index) | [English](https://dframeframework.com/en/page/index) - coming soon.
+[Polish](https://dframeframework.com/pl/page/index) | [English](https://dframeframework.com/en/page/index)
 
 Download Files and run composer update.
 https://packagist.org/packages/dframe/dframe-demo
@@ -18,7 +18,7 @@ https://packagist.org/packages/dframe/dframe-demo
 [![Preview](https://github.com/dframe/dframe-demo/blob/master/preview.png)](https://github.com/dframe/dframe-demo/blob/master/preview.png)
 
 
-#### Installation
+### Installation
 
 Release
 
