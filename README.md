@@ -22,10 +22,10 @@ https://packagist.org/packages/dframe/dframe-demo
 
 Release
 
-    `composer create-project dframe/dframe-demo project_name`
+    composer create-project dframe/dframe-demo project_name
 
 Or dev
 
-    `composer create-project dframe/dframe-demo --stability=dev project_name_dev`
+    composer create-project dframe/dframe-demo --stability=dev project_name_dev
 
 
