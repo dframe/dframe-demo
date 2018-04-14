@@ -13,10 +13,19 @@ Language
 Download Files and run composer update.
 https://packagist.org/packages/dframe/dframe-demo
 
-Or use
 
-`composer create-project dframe/dframe-demo project_name`
+## Preview
+[![Preview](https://github.com/dframe/dframe-demo/blob/master/preview.png)](https://github.com/dframe/dframe-demo/blob/master/preview.png)
 
-for developer 
 
-`composer create-project dframe/dframe-demo --stability=dev project_name_dev`
+#### Installation
+
+Release
+
+    `composer create-project dframe/dframe-demo project_name`
+
+Or dev
+
+    `composer create-project dframe/dframe-demo --stability=dev project_name_dev`
+
+
