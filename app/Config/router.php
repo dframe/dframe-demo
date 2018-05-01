@@ -21,6 +21,7 @@ return array(
             'documents/[pageId]/', 
             'task=page&action=show&pageId=[pageId]'
         ),
+        
         'error/:code' => array(
             'error/[code]/', 
             'task=page&action=error&type=[code]',
@@ -28,6 +29,17 @@ return array(
                 'code' => '[code]'
             )
         ),
+        
+        ':task/:action' => array(
+            '[task]/[action]/[params]',
+            'task=[task]&action=[action]',
+            'params' => '(.*)',
+            '_params' => array(
+                '[name]/[value]/',
+                '[name]=[value]'
+            )
+         ),
+
         'default' => array(
             '[task]/[action]/[params]',
             'task=[task]&action=[action]',
