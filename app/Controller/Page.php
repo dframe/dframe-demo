@@ -32,7 +32,7 @@ class PageController extends \Controller\Controller
 
         $errorsTypes = array('404');
         if (!isset($_GET['type']) OR !in_array($_GET['type'], $errorsTypes)) {
-            return $this->router->redirect('page/index');
+            return $this->router->redirect(':task/:action?task=page&action=index');
         }
 
         return Response::create($view->fetch('errors/'.$_GET['type']))->status($_GET['type']);
@@ -79,7 +79,7 @@ class PageController extends \Controller\Controller
         $patchController = $smartyConfig->get('setTemplateDir', APP_DIR.'View/templates').'/page/'.htmlspecialchars($_GET['action']).$smartyConfig->get('fileExtension', '.html.php');
         
         if (!file_exists($patchController)) {  
-            return $this->router->redirect('page/index');
+            return $this->router->redirect(':task/:action?task=page&action=index');
         }
 
         return Response::create($view->fetch('page/'.htmlspecialchars($_GET['action'])));
