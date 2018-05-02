@@ -3,9 +3,11 @@ app/View/cache/*
 app/View/logs/*
 web/assets/*
 vendor
-.project
-composer.lock
 
+.project
+.vscode/
+
+composer.lock
 
 !app/View/templates_c/.gitkeep
 !app/View/cache/.gitkeep
