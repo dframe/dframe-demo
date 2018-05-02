@@ -7,6 +7,7 @@
  */
 
 namespace Controller;
+
 use Dframe\Config;
 use Dframe\Router\Response;
 
@@ -36,10 +37,9 @@ class PageController extends \Controller\Controller
         }
 
         return Response::create($view->fetch('errors/'.$_GET['type']))->status($_GET['type']);
-        
     }
 
-    public function index() 
+    public function index()
     {
         $view = $this->loadView('Index');
         $view->assign('contents', 'Example assign');
@@ -48,7 +48,7 @@ class PageController extends \Controller\Controller
     }
 
 
-    public function responseExample() 
+    public function responseExample()
     {
         $view = $this->loadView('Index');
         $view->assign('contents', 'Example assign');
@@ -57,9 +57,9 @@ class PageController extends \Controller\Controller
     }
 
 
-    public function json() 
+    public function json()
     {
-        return Response::renderJSON(array('return' => '1')); 
+        return Response::renderJSON(array('return' => '1'));
     }
 
     /**
@@ -77,13 +77,13 @@ class PageController extends \Controller\Controller
         $view = $this->loadView('Index');
 
         $patchController = $smartyConfig->get('setTemplateDir', APP_DIR.'View/templates').'/page/'.htmlspecialchars($_GET['action']).$smartyConfig->get('fileExtension', '.html.php');
-        
-        if (!file_exists($patchController)) {  
+
+        if (!file_exists($patchController)) {
             return $this->router->redirect(':task/:action?task=page&action=index');
         }
 
-        return Response::create($view->fetch('page/'.htmlspecialchars($_GET['action'])));
-        
+        return Response::create($view->fetch('page/' . htmlspecialchars($_GET['action'])));
+
     }
-    
+
 }
