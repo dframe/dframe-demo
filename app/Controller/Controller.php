@@ -9,7 +9,7 @@
 namespace Controller;
 
 /**
- * This class include methods for controller.
+ * This class contains methods for controller.
  */
 
 abstract class Controller extends \Dframe\Controller
