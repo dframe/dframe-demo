@@ -2,7 +2,8 @@
     "name": "dframe/dframe-demo",
     "description": "It is a simple demo website based on Dframeframework",
     "license": "MIT",
-    "keywords": ["dframe", "demo", "framework", "website", "application"],
+    "keywords": ["dframe", "demo", "framework", "website", "application", "blog"],
+    "homepage": "https://dframeframework.com",
     "type": "project",
     "autoload": {
         "psr-4": {"": "app/"}
