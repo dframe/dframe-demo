@@ -13,6 +13,6 @@ branches:
 only: master
 
 install: 
-   composer install --no-cache
+   composer install
 
 script: phpunit
