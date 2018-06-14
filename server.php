@@ -10,7 +10,7 @@
 
 /**
  * Usage:
- * php -S localhost:8080 -t / server.php
+ * php -S localhost:8080 -t web/ server.php
  */
 
 $uri = urldecode(
