@@ -5,7 +5,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/dframe/dframe-demo/v/unstable)](https://packagist.org/packages/dframe/Dframe-demo) 
 [![License](https://poser.pugx.org/dframe/dframe-demo/license)](https://packagist.org/packages/dframe/Dframe-demo)
 
-**Documentation available at** [https://dframeframework.com](https://dframeframework.com/pl/page/index)
+**Documentation available at** [https://dframeframework.com](https://dframeframework.com/en/page/index)
 
 Language
 [Polish](https://dframeframework.com/pl/page/index) | [English](https://dframeframework.com/en/page/index)
