@@ -9,14 +9,11 @@
 
 namespace Tests;
 
+use PHPUnit\Framework\TestCase;
+
 ini_set('session.use_cookies', 0);
 
 session_start();
-
-// backward compatibility
-if (!class_exists('\PHPUnit\Framework\TestCase') and class_exists('\PHPUnit_Framework_TestCase')) {
-    class_alias('\PHPUnit_Framework_TestCase', '\PHPUnit\Framework\TestCase');
-}
 
 $autoloader = include dirname(__DIR__) . '../../vendor/autoload.php';
 require_once dirname(__FILE__) . '/../Bootstrap.php';
@@ -28,7 +25,7 @@ require_once dirname(__FILE__) . '/../../web/config.php';
  * @author Sławek Kaleta <slaszka@gmail.com>
  */
 
-class RunTest extends \PHPUnit\Framework\TestCase
+class RunTest extends TestCase
 {
 
 
@@ -38,7 +35,7 @@ class RunTest extends \PHPUnit\Framework\TestCase
         $bootstrap->router = new \Dframe\Router();
 
         $run = new \Dframe\Loader($bootstrap);
-        $page = $run->loadController('Page');
+        $page = $run->loadController('Page')->returnController;
 
         $this->assertEquals('{"return":"1"}', $page->json()->getBody());
 
