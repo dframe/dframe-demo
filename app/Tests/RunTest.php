@@ -38,7 +38,7 @@ class RunTest extends \PHPUnit\Framework\TestCase
         $bootstrap->router = new \Dframe\Router();
 
         $run = new \Dframe\Loader($bootstrap);
-        $page = $run->loadController('Page');
+        $page = $run->loadController('Page')->returnController;
 
         $this->assertEquals('{"return":"1"}', $page->json()->getBody());
 
