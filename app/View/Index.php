@@ -3,6 +3,11 @@ namespace View;
 
 class IndexView extends \View\View
 {
+    /**
+     * Initial function call working like __construct
+     *
+     * @return void
+     */
     public function init()
     {
 

@@ -18,6 +18,11 @@ namespace Model;
 class ExampleModel extends \Model\Model
 {
 
+    /**
+     * Example function
+     *
+     * @return array
+     */
     public function example()
     {
         $results = array(); //Mysql query results

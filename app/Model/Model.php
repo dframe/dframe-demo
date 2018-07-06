@@ -18,6 +18,12 @@ use Dframe\Database\Database;
 
 abstract class Model extends \Dframe\Model
 {
+
+    /**
+     * Start function
+     *
+     * @return void
+     */
     public function start()
     {
         try {
