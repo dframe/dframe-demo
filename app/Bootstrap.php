@@ -30,14 +30,9 @@ class Bootstrap
             'router' => \Dframe\Router::class,
         ];
 
-        $this->providers['baseClass'] = [
-            'session' => \Dframe\Session::class, // Best to set projec
-            'msg' => \Dframe\Messages::class,     // Default notify cl
-            'token' => \Dframe\Token::class,     // Default csrf token
-        ];
-
-        $this->providers['modules'] = [
-        ];
+        $this->session = new \Dframe\Session('session_name'); // Best to set projec
+        $this->msg = new \Dframe\Messages($this->session);     // Default notify cl
+        $this->token = new \Dframe\Token($this->session);     // Default csrf token
 
         return $this;
     }
