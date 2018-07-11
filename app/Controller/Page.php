@@ -40,7 +40,7 @@ class PageController extends \Controller\Controller
     {
         $view = $this->loadView('Index');
 
-        $errorsTypes = array('404');
+        $errorsTypes = ['404'];
         if (!isset($_GET['type']) or !in_array($_GET['type'], $errorsTypes)) {
             return $this->router->redirect(':task/:action?task=page&action=index');
         }
@@ -81,7 +81,7 @@ class PageController extends \Controller\Controller
      */
     public function json()
     {
-        return Response::renderJSON(array('return' => '1'));
+        return Response::renderJSON(['return' => '1']);
     }
 
     /**
