@@ -5,7 +5,7 @@ $debugAllowed = array(
 );
 
 // DEBUG configuration
-if (isset($_SERVER['REMOTE_ADDR']) AND in_array($_SERVER['REMOTE_ADDR'], $debugAllowed)) {
+if (isset($_SERVER['REMOTE_ADDR']) and in_array($_SERVER['REMOTE_ADDR'], $debugAllowed)) {
     ini_set("display_errors", "on");  // Debug setings
     error_reporting(E_ALL);           // Debug setings
     define('MOD_REWRITE', true);      // Mod rewrite (ex. task=page&action=login -> page/login )
@@ -20,15 +20,15 @@ if (isset($_SERVER['REMOTE_ADDR']) AND in_array($_SERVER['REMOTE_ADDR'], $debugA
 }
 
 // Application configuration
-define('APP_DIR', dirname(__FILE__).'/../app/');
+define('APP_DIR', dirname(__FILE__) . '/../app/');
 define('CODING_STYLE', true);    // Check PSR-2: Coding Style
 
 // Website configuration
 define('VERSION', "Dframe");     // Version aplication
 define('SALT', "YOURSALT123");   // SALT default: YOURSALT123
 
-if (isset($_SERVER['REMOTE_ADDR']) AND ($_SERVER['REMOTE_ADDR'] == '127.0.0.1' OR $_SERVER['REMOTE_ADDR'] == '::1')) {
-    define('HTTP_HOST', $_SERVER['HTTP_HOST'].'/Dframe-demo');  // Dev
+if (isset($_SERVER['REMOTE_ADDR']) and ($_SERVER['REMOTE_ADDR'] == '127.0.0.1' or $_SERVER['REMOTE_ADDR'] == '::1')) {
+    define('HTTP_HOST', $_SERVER['HTTP_HOST'] . '/Dframe-demo');  // Dev
 } else {
     define('HTTP_HOST', 'website.url'); // Production
 }
