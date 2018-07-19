@@ -11,10 +11,10 @@ return [
         'minifyCssEnabled' => true,
         'minifyJsEnabled' => true,
         'assetsDir' => 'assets',
-        'assetsPath' => APP_DIR.'View/',
+        'assetsPath' => APP_DIR . 'View/',
         'cacheDir' => 'cache',
-        'cachePath' => APP_DIR.'../web/',
-        'cacheUrl' => HTTP_HOST.'/',
+        'cachePath' => APP_DIR . '../web/',
+        'cacheUrl' => HTTP_HOST . '/',
     ],
 
     'routes' => [
