@@ -28,12 +28,12 @@ abstract class Model extends \Dframe\Model
     {
         try {
             if (!empty(DB_HOST)) {
-                $dbConfig = array(
+                $dbConfig = [
                     'host' => DB_HOST,
                     'dbname' => DB_DATABASE,
                     'username' => DB_USER,
                     'password' => DB_PASS,
-                );
+                ];
                 $this->db = new Database($dbConfig);
                 $this->db->setErrorLog(setErrorLog); // Debugowanie
             }

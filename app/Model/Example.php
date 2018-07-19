@@ -25,7 +25,7 @@ class ExampleModel extends \Model\Model
      */
     public function example()
     {
-        $results = array(); //Mysql query results
-        return $this->methodResult(true, array('data' => $results));
+        $results = []; //Mysql query results
+        return $this->methodResult(true, ['data' => $results]);
     }
 }
