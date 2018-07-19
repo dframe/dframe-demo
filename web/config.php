@@ -1,8 +1,8 @@
 <?php 
-$debugAllowed = array(
+$debugAllowed = [
     '127.0.0.1',
     '::1',
-);
+];
 
 // DEBUG configuration
 if (isset($_SERVER['REMOTE_ADDR']) and in_array($_SERVER['REMOTE_ADDR'], $debugAllowed)) {
