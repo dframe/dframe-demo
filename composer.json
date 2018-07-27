@@ -18,7 +18,7 @@
         }
     },
     "require": {
-        "dframe/dframe": "dev-master",
+        "dframe/dframe": "v4.0.x-dev",
         "dframe/database": "dev-master",
         "smarty/smarty": "^3.1"
     },
