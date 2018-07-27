@@ -13,8 +13,5 @@ only: master
 
 install:
    composer install
-   
-install:
-   composer clear-cache
 
 script: phpunit
