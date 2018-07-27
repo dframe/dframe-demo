@@ -11,8 +11,10 @@ sudo: false
 branches:
 only: master
 
-install: 
-   composer clear-cache
+install:
    composer install
+   
+install:
+   composer clear-cache
 
 script: phpunit
