@@ -10,7 +10,6 @@ class IndexView extends \View\View
      */
     public function init()
     {
-
         if (isset($this->router)) {
             $this->assign('router', $this->router);
         }
@@ -31,7 +30,5 @@ class IndexView extends \View\View
         if ($this->baseClass->msg->hasMessages('info')) {
             $this->assign('msgInfo', $this->baseClass->msg->display('info'));
         }
-
     }
-
 }

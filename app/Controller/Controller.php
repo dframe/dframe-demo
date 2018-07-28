@@ -18,9 +18,8 @@ abstract class Controller extends \Dframe\Controller
    *
    * @return void
    */
-  public function start()
-  {
-      // For example you can check Auth 
-  }
-
+    public function start()
+    {
+        // For example you can check Auth
+    }
 }

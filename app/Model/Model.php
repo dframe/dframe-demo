@@ -10,6 +10,7 @@
 namespace Model;
 
 use Dframe\Database\Database;
+
 /**
  * This class includes methods for models.
  *
@@ -37,11 +38,9 @@ abstract class Model extends \Dframe\Model
                 $this->db = new Database($dbConfig);
                 $this->db->setErrorLog(setErrorLog); // Debugowanie
             }
-
         } catch (DBException $e) {
             echo 'The connect can not create: ' . $e->getMessage();
             exit();
         }
     }
-
 }

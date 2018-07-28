@@ -27,8 +27,6 @@ require_once dirname(__FILE__) . '/../../web/config.php';
 
 class RunTest extends TestCase
 {
-
-
     public function testCreateController()
     {
         $bootstrap = new \Bootstrap();
@@ -38,7 +36,5 @@ class RunTest extends TestCase
         $page = $run->loadController('Page')->returnController;
 
         $this->assertEquals('{"return":"1"}', $page->json()->getBody());
-
     }
-
 }
