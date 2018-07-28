@@ -28,7 +28,6 @@ class PageController extends \Controller\Controller
      */
     public function init()
     {
-
     }
 
     /**
@@ -94,7 +93,6 @@ class PageController extends \Controller\Controller
 
     public function __call($method, $test)
     {
-
         $smartyConfig = Config::load('view/smarty');
         $view = $this->loadView('Index');
 
@@ -105,7 +103,5 @@ class PageController extends \Controller\Controller
         }
 
         return Response::create($view->fetch('page/' . htmlspecialchars($_GET['action'])));
-
     }
-
 }

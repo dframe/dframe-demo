@@ -10,13 +10,11 @@ if (isset($_SERVER['REMOTE_ADDR']) and in_array($_SERVER['REMOTE_ADDR'], $debugA
     error_reporting(E_ALL);           // Debug setings
     define('MOD_REWRITE', true);      // Mod rewrite (ex. task=page&action=login -> page/login )
     define('setErrorLog', true);      // DB show error
-
 } else {
     ini_set("display_errors", "off"); // Debug setings
     error_reporting(E_ALL);           // Debug setings
     define('MOD_REWRITE', true);      // Mod rewrite (ex. task=page&action=login -> page/login )
     define('setErrorLog', false);     // DB show error
-
 }
 
 // Application configuration

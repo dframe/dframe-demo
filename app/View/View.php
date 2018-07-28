@@ -17,10 +17,8 @@ namespace View;
 
 abstract class View extends \Dframe\View
 {
-
     public function start()
     {
         $this->view = new \Dframe\View\SmartyView();
     }
-
 }

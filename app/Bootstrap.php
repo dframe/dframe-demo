@@ -7,10 +7,7 @@
  * @license http://yourLicenceUrl/ (Licence Name)
  */
 
-use Dframe\Session;
-use Dframe\Messages;
 use Dframe\Token;
-
 
 require_once dirname(__DIR__) . '/web/config.php';
 
@@ -22,10 +19,8 @@ require_once dirname(__DIR__) . '/web/config.php';
 
 class Bootstrap
 {
-
     public function __construct()
     {
-
         $this->providers['core'] = [
             'router' => \Dframe\Router::class,
         ];
@@ -36,5 +31,4 @@ class Bootstrap
 
         return $this;
     }
-
 }
