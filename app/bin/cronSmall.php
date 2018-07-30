@@ -9,7 +9,7 @@ include_once dirname(__DIR__) . '/../web/Config.php';
 /**
  * Self Aonymous Cron class
  */
-return (new class () extends \Dframe\Cron\Task {
+return (new class() extends \Dframe\Cron\Task {
     public function init()
     {
         $this->dirLog = dirname(__DIR__) . '/../app/View/cache/logs/cronSmall.txt';
@@ -30,6 +30,5 @@ return (new class () extends \Dframe\Cron\Task {
         // $mailModel = $this->loadModel('Mail');
         // $mailModel->sendMails();
     }
-
 }
 )->init();
