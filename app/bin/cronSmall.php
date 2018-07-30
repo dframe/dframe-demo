@@ -9,11 +9,9 @@ include_once dirname(__DIR__) . '/../web/Config.php';
 /**
  * Self Aonymous Cron class
  */
-return (new class () extends \Dframe\Cron\Task
-{
+return (new class () extends \Dframe\Cron\Task {
     public function init()
     {
-
         $this->dirLog = dirname(__DIR__) . '/../app/View/cache/logs/cronSmall.txt';
 
         if (file_exists($this->dirLog) and filemtime($this->dirLog) + 59 > time()) {
