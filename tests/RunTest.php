@@ -7,7 +7,7 @@
  * @license http://yourLicenceUrl/ (Licence Name)
  */
 
-namespace Tests;
+namespace Dframe\Tests;
 
 use PHPUnit\Framework\TestCase;
 
@@ -15,9 +15,9 @@ ini_set('session.use_cookies', 0);
 
 session_start();
 
-$autoloader = include dirname(__DIR__) . '../../vendor/autoload.php';
-require_once dirname(__FILE__) . '/../Bootstrap.php';
-require_once dirname(__FILE__) . '/../../web/config.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../app/Bootstrap.php';
+require_once __DIR__ . '/../web/config.php';
 
 /**
  * Testing project.
