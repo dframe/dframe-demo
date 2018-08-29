@@ -1,7 +1,7 @@
 <?php
 namespace View;
 
-class IndexView extends \View\View
+class IndexView extends View
 {
     /**
      * Initial function call working like __construct

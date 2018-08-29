@@ -18,7 +18,7 @@ use Dframe\Router\Response;
  * @author First Name <adres@email>
  */
 
-class PageController extends \Controller\Controller
+class PageController extends Controller
 {
 
     /**

@@ -15,7 +15,7 @@ namespace Model;
  * @author First Name <adres@email>
  */
 
-class ExampleModel extends \Model\Model
+class ExampleModel extends Model
 {
 
     /**
