@@ -1,0 +1,9 @@
+#!/usr/bin/php
+<?php
+require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/web/config.php';
+
+$cli = ((new class () extends \Dframe\Cli\Command {})->run($argv));
+
+/* vim: set expandtab tabstop=2 shiftwidth=2: */
+?>
