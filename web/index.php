@@ -2,7 +2,7 @@
 
 /**
  * DframeFramework
- * Copyright (C) Sławomir Kaleta
+ * Copyright (c) Firstname Lastname
  *
  * @license https://github.com/dusta/Dframe/blob/master/LICENCE
  */
