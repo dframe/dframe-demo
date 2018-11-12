@@ -16,9 +16,12 @@ use Dframe\Database\Database;
  *
  * @abstract
  */
-
 abstract class Model extends \Dframe\Model
 {
+    /**
+     * @var Database
+     */
+    protected $db;
 
     /**
      * Start function
@@ -35,10 +38,11 @@ abstract class Model extends \Dframe\Model
                     'username' => DB_USER,
                     'password' => DB_PASS,
                 ];
+
                 $this->db = new Database($dbConfig);
                 $this->db->setErrorLog(setErrorLog); // Debugowanie
             }
-        } catch (DBException $e) {
+        } catch (\PDOException $e) {
             echo 'The connect can not create: ' . $e->getMessage();
             exit();
         }

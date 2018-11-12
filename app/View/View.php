@@ -15,10 +15,25 @@ namespace View;
  * @author First Name <adres@email>
  */
 
+use Dframe\View\SmartyView;
+
+/**
+ * Class View
+ *
+ * @package View
+ */
 abstract class View extends \Dframe\View
 {
+    /**
+     * @var SmartyView
+     */
+    public $view;
+
+    /**
+     * Constructor
+     */
     public function start()
     {
-        $this->view = new \Dframe\View\SmartyView();
+        $this->view = new SmartyView();
     }
 }

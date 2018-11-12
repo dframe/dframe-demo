@@ -1,6 +1,12 @@
 <?php
+
 namespace View;
 
+/**
+ * Class IndexView
+ *
+ * @package View
+ */
 class IndexView extends View
 {
     /**

@@ -7,9 +7,8 @@ vendor
 .project
 .vscode/
 
-composer.lock
-
 !app/View/templates_c/.gitkeep
 !app/View/cache/.gitkeep
 !app/View/logs/.gitkeep
 !web/assets/.gitkeep
+!.gitignore

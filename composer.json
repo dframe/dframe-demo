@@ -1,6 +1,6 @@
 {
     "name": "dframe/dframe-demo",
-    "description": "It is a simple demo website based on Dframeframework",
+    "description": "It is a simple demo website based on Dframe Framework",
     "license": "MIT",
     "keywords": [
         "dframe",
@@ -14,13 +14,16 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "": "app/"
+            "": "app/",
+            "Mail\\": "modules/Mail/src"
         }
     },
     "require": {
-        "dframe/dframe": "v4.0.x-dev",
+        "dframe/dframe": "dev-master",
         "dframe/database": "dev-master",
-        "smarty/smarty": "^3.1"
+        "dframe/cli": "dev-master",
+        "smarty/smarty": "^3.1",
+        "dframe/mymail": "^1.1"
     },
     "autoload-dev": {
         "psr-4": {

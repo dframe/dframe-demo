@@ -17,7 +17,6 @@ use Dframe\Router\Response;
  *
  * @author First Name <adres@email>
  */
-
 class PageController extends Controller
 {
 
@@ -55,6 +54,8 @@ class PageController extends Controller
     public function index()
     {
         $view = $this->loadView('Index');
+
+        $model = $this->loadModel('Example');
         $view->assign('contents', 'Example assign');
 
         return $view->render('index');
@@ -87,10 +88,10 @@ class PageController extends Controller
      * Catch-all method for requests that can't be matched.
      *
      * @param  string $method
-     * @param  array  $parameters
+     * @param         $test
+     *
      * @return Response
      */
-
     public function __call($method, $test)
     {
         $smartyConfig = Config::load('view/smarty');

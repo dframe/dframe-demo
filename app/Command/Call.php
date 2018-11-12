@@ -16,6 +16,10 @@ namespace Command;
  */
 class CallCommand extends \Dframe\Cli\Command
 {
+    /**
+     * @param string $first
+     * @param string $second
+     */
     public function help($first = '', $second = '')
     {
         echo 'This is example call Command from cli' . PHP_EOL;

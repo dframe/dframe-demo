@@ -7,6 +7,8 @@
  * @license http://yourLicenceUrl/ (Licence Name)
  */
 
+use Dframe\Messages;
+use Dframe\Session;
 use Dframe\Token;
 
 require_once __DIR__ . '/../web/config.php';
@@ -16,18 +18,39 @@ require_once __DIR__ . '/../web/config.php';
  *
  * @author First Name <adres@email>
  */
-
 class Bootstrap
 {
+    /**
+     * @var array
+     */
+    public $providers;
+
+    /**
+     * @var Session
+     */
+    public $session;
+
+    /**
+     * @var Token
+     */
+    public $token;
+
+    /**
+     * Bootstrap constructor.
+     *
+     * @throws Exception
+     */
     public function __construct()
     {
-        $this->providers['core'] = [
-            'router' => \Dframe\Router::class,
+        $this->providers = [
+            'core' => [
+                'router' => \Dframe\Router::class
+            ]
         ];
 
-        $this->session = new \Dframe\Session('session_name'); // Best to set projec
-        $this->msg = new \Dframe\Messages($this->session);     // Default notify cl
-        $this->token = new \Dframe\Token($this->session);     // Default csrf token
+        $this->session = new Session('session_name'); // Best to set projec
+        $this->msg = new Messages($this->session);     // Default notify cl
+        $this->token = new Token($this->session);     // Default csrf token
 
         return $this;
     }
