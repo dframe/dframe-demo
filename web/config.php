@@ -34,7 +34,7 @@ if (isset($_SERVER['REMOTE_ADDR']) and ($_SERVER['REMOTE_ADDR'] == '127.0.0.1' o
 }
 
 // Database configuration
-define('DB_HOST', "localhost");      // Database Host (localhost)
+define('DB_HOST', "");      // Database Host (localhost)
 define('DB_USER', "root");      // Database Username
 define('DB_PASS', "");      // Database Password
 define('DB_DATABASE', "dframe_demo");  // Databese Name
