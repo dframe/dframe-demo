@@ -29,12 +29,12 @@ class RunTest extends TestCase
 {
     public function testCreateController()
     {
-        $bootstrap = new \Bootstrap();
-        $bootstrap->router = new \Dframe\Router();
+        $Bootstrap = new \Bootstrap();
+        $Bootstrap->router = new \Dframe\Router();
 
-        $run = new \Dframe\Loader($bootstrap);
-        $page = $run->loadController('Page')->returnController;
+        $Loader = new \Dframe\Loader($Bootstrap);
+        $PageController = $Loader->loadController('Page');
 
-        $this->assertEquals('{"return":"1"}', $page->json()->getBody());
+        $this->assertEquals('{"return":"1"}', $PageController->json()->getBody());
     }
 }
