@@ -34,16 +34,16 @@ class PageController extends Controller
      *
      * @return Response
      */
-    public function error()
+    public function error($code)
     {
         $view = $this->loadView('Index');
 
         $errorsTypes = ['404'];
-        if (!isset($_GET['type']) or !in_array($_GET['type'], $errorsTypes)) {
+        if (!isset($code) or !in_array($code, $errorsTypes)) {
             return $this->router->redirect(':task/:action?task=page&action=index');
         }
 
-        return Response::create($view->fetch('errors/' . $_GET['type']))->status($_GET['type']);
+        return Response::create($view->fetch('errors/' . $code))->status($code);
     }
 
     /**
@@ -87,7 +87,7 @@ class PageController extends Controller
     /**
      * Catch-all method for requests that can't be matched.
      *
-     * @param  string $method
+     * @param string  $method
      * @param         $test
      *
      * @return Response
