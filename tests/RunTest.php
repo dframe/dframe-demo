@@ -35,6 +35,6 @@ class RunTest extends TestCase
         $Loader = new \Dframe\Loader($Bootstrap);
         $PageController = $Loader->loadController('Page');
 
-        $this->assertEquals('{"return":"1"}', $PageController->json()->getBody());
+        $this->assertEquals('{"return":1}', $PageController->json()->getBody());
     }
 }
