@@ -13,6 +13,6 @@ only: master
 
 install:
    composer install
-
-script:
+   
+script: 
   - vendor/bin/phpunit
