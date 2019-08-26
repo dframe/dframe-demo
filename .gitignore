@@ -14,3 +14,4 @@ vendor
 # Ignore IDE
 .project
 .vscode/
+.idea
