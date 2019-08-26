@@ -11,7 +11,7 @@ namespace Dframe\Tests;
 
 use PHPUnit\Framework\TestCase;
 
-ini_set('session.use_cookies', 0);
+ini_set('session.use_cookies', "0");
 
 session_start();
 

@@ -4,7 +4,7 @@ use Dframe\Cron\Task;
 use Dframe\Router\Response;
 
 set_time_limit(0);
-ini_set('max_execution_time', 0);
+ini_set('max_execution_time', "0");
 date_default_timezone_set('Europe/Warsaw');
 
 require_once __DIR__ . '/../../vendor/autoload.php';
