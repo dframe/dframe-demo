@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Project Name
  * Copyright (c) Firstname Lastname
@@ -10,6 +9,7 @@
 namespace Model;
 
 use Dframe\Database\Database;
+use PDO;
 
 /**
  * This class includes methods for models.
@@ -32,17 +32,29 @@ abstract class Model extends \Dframe\Model
     {
         try {
             if (!empty(DB_HOST)) {
-                $dbConfig = [
+
+                // Debug Config
+                $config = [
+                    'logDir' => APP_DIR . 'View/logs/',
+                    'options' => [
+                        //PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
+                        PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT,
+                        // Set pdo error mode silent
+                        //PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // If you want to Show Class exceptions on Screen, Uncomment below code
+                        //PDO::ATTR_EMULATE_PREPARES => false, // Use this setting to force PDO to either always emulate prepared statements (if TRUE), or to try to use native prepared statements (if FALSE).
+                        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+                        // Set default pdo fetch mode as fetch assoc
+                    ]
+                ];
+                $dsn = [
                     'host' => DB_HOST,
                     'dbname' => DB_DATABASE,
-                    'username' => DB_USER,
-                    'password' => DB_PASS,
+                    'dbtype' => 'mysql'
                 ];
-
-                $this->db = new Database($dbConfig);
-                $this->db->setErrorLog(setErrorLog); // Debugowanie
+                $this->db = new Database($dsn, DB_USER, DB_PASS, $config);
+                $this->db->setErrorLog(true); // Debug
             }
-        } catch (\PDOException $e) {
+        } catch (\Exception $e) {
             echo 'The connect can not create: ' . $e->getMessage();
             exit();
         }

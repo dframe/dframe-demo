@@ -8,7 +8,7 @@
         "framework",
         "website",
         "application",
-        "blog"
+        "microservices"
     ],
     "homepage": "https://dframeframework.com",
     "type": "project",
@@ -19,11 +19,11 @@
         }
     },
     "require": {
-        "dframe/dframe": "dev-master",
-        "dframe/database": "dev-master",
-        "dframe/cli": "dev-master",
+        "dframe/dframe": "^4.0",
+        "dframe/database": "^2.0",
         "smarty/smarty": "^3.1",
-        "dframe/mymail": "^1.1"
+        "dframe/mymail": "^1.1",
+        "ext-pdo": "*"
     },
     "autoload-dev": {
         "psr-4": {
