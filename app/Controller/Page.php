@@ -32,6 +32,8 @@ class PageController extends Controller
     /**
      * Error function
      *
+     * @param $code
+     *
      * @return Response
      */
     public function error($code)
