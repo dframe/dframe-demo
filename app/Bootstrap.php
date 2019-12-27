@@ -8,6 +8,7 @@
  */
 
 use Dframe\Messages;
+use Dframe\Router;
 use Dframe\Session;
 use Dframe\Token;
 
@@ -44,7 +45,7 @@ class Bootstrap
     {
         $this->providers = [
             'core' => [
-                'router' => \Dframe\Router::class
+                'router' => Router::class
             ]
         ];
 

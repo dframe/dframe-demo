@@ -9,6 +9,9 @@
 
 namespace Dframe\Tests;
 
+use Bootstrap;
+use Dframe\Loader;
+use Dframe\Router;
 use PHPUnit\Framework\TestCase;
 
 ini_set('session.use_cookies', "0");
@@ -29,10 +32,10 @@ class RunTest extends TestCase
 {
     public function testCreateController()
     {
-        $Bootstrap = new \Bootstrap();
-        $Bootstrap->router = new \Dframe\Router();
+        $Bootstrap = new Bootstrap();
+        $Bootstrap->router = new Router();
 
-        $Loader = new \Dframe\Loader($Bootstrap);
+        $Loader = new Loader($Bootstrap);
         $PageController = $Loader->loadController('Page');
 
         $this->assertEquals('{"return":"1"}', $PageController->json()->getBody());

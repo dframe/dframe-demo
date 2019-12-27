@@ -9,7 +9,8 @@
     <h3 class="font-header">First Step</h3>
     <p class="lead font-slim">Edit your config.php file in folder web/ </p>
     <p class="lead font-slim"> Set up your HTTP_HOST path for developer.</p>
-    <p class="lead font-slim"> Default is <code>define('HTTP_HOST', $_SERVER['HTTP_HOST'].'/Dframe-demo');</code> Change <b>/Dframe-demo</b> to
+    <p class="lead font-slim"> Default is <code>define('HTTP_HOST', $_SERVER['HTTP_HOST'].'/Dframe-demo');</code> Change
+        <b>/Dframe-demo</b> to
         your folder.</p>
 
     <br>

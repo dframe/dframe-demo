@@ -9,6 +9,7 @@
 namespace Model;
 
 use Dframe\Database\Database;
+use Exception;
 use PDO;
 
 /**
@@ -32,7 +33,6 @@ abstract class Model extends \Dframe\Model
     {
         try {
             if (!empty(DB_HOST)) {
-
                 // Debug Config
                 $config = [
                     'logDir' => APP_DIR . 'View/logs/',
@@ -54,7 +54,7 @@ abstract class Model extends \Dframe\Model
                 $this->db = new Database($dsn, DB_USER, DB_PASS, $config);
                 $this->db->setErrorLog(true); // Debug
             }
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             echo 'The connect can not create: ' . $e->getMessage();
             exit();
         }
