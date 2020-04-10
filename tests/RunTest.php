@@ -38,6 +38,6 @@ class RunTest extends TestCase
         $Loader = new Loader($Bootstrap);
         $PageController = $Loader->loadController('Page');
 
-        $this->assertEquals('{"return":"1"}', $PageController->json()->getBody());
+        $this->assertEquals('{"code":200,"data":[]}', $PageController->json()->getBody());
     }
 }

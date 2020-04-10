@@ -35,12 +35,13 @@ abstract class Model extends \Dframe\Model
             if (!empty(DB_HOST)) {
                 // Debug Config
                 $config = [
-                    'logDir' => APP_DIR . 'View/logs/',
+                    'logDir' => APP_DIR . DIRECTORY_SEPARATOR . 'logs' . DIRECTORY_SEPARATOR,
                     'options' => [
                         //PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
-                        PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT,
+                        //PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT,
                         // Set pdo error mode silent
-                        //PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // If you want to Show Class exceptions on Screen, Uncomment below code
+                        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                        // If you want to Show Class exceptions on Screen, Uncomment below code
                         //PDO::ATTR_EMULATE_PREPARES => false, // Use this setting to force PDO to either always emulate prepared statements (if TRUE), or to try to use native prepared statements (if FALSE).
                         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
                         // Set default pdo fetch mode as fetch assoc
@@ -52,7 +53,7 @@ abstract class Model extends \Dframe\Model
                     'dbtype' => 'mysql'
                 ];
                 $this->db = new Database($dsn, DB_USER, DB_PASS, $config);
-                $this->db->setErrorLog(true); // Debug
+                $this->db->setErrorLog(false); // Debug
             }
         } catch (Exception $e) {
             echo 'The connect can not create: ' . $e->getMessage();

@@ -9,7 +9,7 @@
 
 namespace Controller;
 
-use Dframe\Config;
+use Dframe\Component\Config\Config;
 use Dframe\Router\Response;
 
 /**
@@ -57,7 +57,7 @@ class PageController extends Controller
     {
         $view = $this->loadView('Index');
 
-        $model = $this->loadModel('Example');
+        $modelExample = $this->loadModel('Example');
         $view->assign('contents', 'Example assign');
 
         return $view->render('index');
@@ -83,7 +83,7 @@ class PageController extends Controller
      */
     public function json()
     {
-        return Response::renderJSON(['return' => '1']);
+        return Response::renderJSON(['code' => 200, 'data' => []]);
     }
 
     /**

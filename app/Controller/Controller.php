@@ -17,7 +17,6 @@ namespace Controller;
 abstract class Controller extends \Dframe\Controller
 {
 
-
     /**
      * Initial function call working like __construct
      *

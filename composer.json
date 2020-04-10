@@ -14,12 +14,11 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "": "app/",
-            "Mail\\": "modules/Mail/src"
+            "": "app/"
         }
     },
     "require": {
-        "dframe/dframe": "^4.0",
+        "dframe/dframe": "dev-master",
         "dframe/database": "^2.0",
         "smarty/smarty": "^3.1",
         "dframe/mymail": "^1.1",
