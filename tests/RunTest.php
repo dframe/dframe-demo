@@ -27,7 +27,6 @@ require_once __DIR__ . '/../web/config.php';
  *
  * @author Sławek Kaleta <slaszka@gmail.com>
  */
-
 class RunTest extends TestCase
 {
     public function testCreateController()

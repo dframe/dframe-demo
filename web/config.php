@@ -1,4 +1,5 @@
 <?php
+
 $debugAllowed = [
     '127.0.0.1',
     '::1',
@@ -6,13 +7,13 @@ $debugAllowed = [
 
 // DEBUG configuration
 if (isset($_SERVER['REMOTE_ADDR']) and in_array($_SERVER['REMOTE_ADDR'], $debugAllowed)) {
-    ini_set('display_errors', "1");  // Debug setings
-    error_reporting(E_ALL);           // Debug setings
+    ini_set('display_errors', "1");  // Debug settings
+    error_reporting(E_ALL);           // Debug settings
     define('MOD_REWRITE', true);      // Mod rewrite (ex. task=page&action=login -> page/login )
     define('setErrorLog', true);      // DB show error
 } else {
-    ini_set('display_errors', "0"); // Debug setings
-    error_reporting(E_ALL);           // Debug setings
+    ini_set('display_errors', "0"); // Debug settings
+    error_reporting(E_ALL);           // Debug settings
     define('MOD_REWRITE', true);      // Mod rewrite (ex. task=page&action=login -> page/login )
     define('setErrorLog', false);     // DB show error
 }

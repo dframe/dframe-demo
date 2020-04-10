@@ -4,7 +4,7 @@
  * DframeFramework
  * Copyright (c) Sławomir Kaleta
  *
- * @author Sławomir Kaleta <slaszka@gmail.com>
+ * @author  Sławomir Kaleta <slaszka@gmail.com>
  * @license https://github.com/dframe/dframe/blob/master/LICENCE (MIT)
  */
 
