@@ -8,7 +8,7 @@
 **Documentation available at** [https://dframeframework.com](https://dframeframework.com/en/page/index)
 
 Language
-[Polish](https://dframeframework.com/pl/page/index) | [English](https://dframeframework.com/en/page/index)
+[Polish](https://dframeframework.com/pl/page/index "Dokumentacja PHP") | [English](https://dframeframework.com/en/page/index "Documentation PHP")
 
 Download Files and run composer update.
 https://packagist.org/packages/dframe/dframe-demo
