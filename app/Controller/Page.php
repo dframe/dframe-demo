@@ -19,7 +19,6 @@ use Dframe\Router\Response;
  */
 class PageController extends Controller
 {
-
     /**
      * Initial function call working like __construct
      *
@@ -76,7 +75,7 @@ class PageController extends Controller
         return Response::create($view->fetch('index'));
     }
 
-    /**
+    /**$patchController
      * Json function
      *
      * @return Response
@@ -100,9 +99,9 @@ class PageController extends Controller
         $view = $this->loadView('Index');
 
         $patchController = $smartyConfig->get(
-                'setTemplateDir',
-                APP_DIR . 'View/templates'
-            ) . '/page/' . htmlspecialchars($_GET['action']) . $smartyConfig->get('fileExtension', '.html.php');
+            'setTemplateDir',
+            APP_DIR . 'View/templates'
+        ) . '/page/' . htmlspecialchars($_GET['action']) . $smartyConfig->get('fileExtension', '.html.php');
 
         if (!file_exists($patchController)) {
             return $this->router->redirect(':task/:action?task=page&action=index');

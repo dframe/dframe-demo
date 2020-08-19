@@ -156,12 +156,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dframe/dframe.git",
-                "reference": "cf28c3b84b63ad225150fc3f5eb8527eac9e36c0"
+                "reference": "c9f246135ceacf25a04bee588d4b7934a5e2dfab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dframe/dframe/zipball/cf28c3b84b63ad225150fc3f5eb8527eac9e36c0",
-                "reference": "cf28c3b84b63ad225150fc3f5eb8527eac9e36c0",
+                "url": "https://api.github.com/repos/dframe/dframe/zipball/c9f246135ceacf25a04bee588d4b7934a5e2dfab",
+                "reference": "c9f246135ceacf25a04bee588d4b7934a5e2dfab",
                 "shasum": ""
             },
             "require": {
@@ -214,7 +214,7 @@
                 "mvc",
                 "php"
             ],
-            "time": "2020-05-11T16:17:32+00:00"
+            "time": "2020-08-19T13:05:27+00:00"
         },
         {
             "name": "dframe/mymail",

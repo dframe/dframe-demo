@@ -14,7 +14,6 @@ require_once __DIR__ . '/../../web/config.php';
  * Self Anonymous Cron class
  */
 return (new class() extends Task {
-
     /**
      * @return Response
      */

@@ -16,7 +16,6 @@ namespace Model;
  */
 class ExampleModel extends Model
 {
-
     /**
      * Example function
      *
