@@ -21,6 +21,7 @@ if (isset($_SERVER['REMOTE_ADDR']) and in_array($_SERVER['REMOTE_ADDR'], $debugA
 // Application configuration
 define('APP_NAME', "dframe_demo");   // Project Name
 define('APP_DIR', __DIR__ . '/../app/');
+define('WEB_DIR', __DIR__);
 define('CODING_STYLE', true);    // Check PSR-2: Coding Style
 
 // Website configuration
