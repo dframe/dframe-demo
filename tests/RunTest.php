@@ -10,8 +10,8 @@
 namespace Dframe\Tests;
 
 use Bootstrap;
-use Dframe\Loader;
-use Dframe\Router;
+use Dframe\Loader\Loader;
+use Dframe\Router\Router;
 use PHPUnit\Framework\TestCase;
 
 ini_set('session.use_cookies', "0");

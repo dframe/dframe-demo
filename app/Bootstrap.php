@@ -6,7 +6,7 @@
  * @license http://yourLicenceUrl/ (Licence Name)
  */
 
-use Dframe\Router;
+use Dframe\Router\Router;
 
 require_once __DIR__ . '/../web/config.php';
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62041188227eff391f7d4070b49b404d",
+    "content-hash": "90b93ab50c174bb83eb09aac40b953c4",
     "packages": [
         {
             "name": "dframe/cli",
@@ -51,52 +51,6 @@
                 "mvc"
             ],
             "time": "2018-10-14T12:33:23+00:00"
-        },
-        {
-            "name": "dframe/config",
-            "version": "v4.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dframe/config.git",
-                "reference": "6a1df0a66129277557321e209aafd39a2bee09c3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dframe/config/zipball/6a1df0a66129277557321e209aafd39a2bee09c3",
-                "reference": "6a1df0a66129277557321e209aafd39a2bee09c3",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": ">=7.0"
-            },
-            "require-dev": {
-                "mikey179/vfsstream": "^1.6",
-                "phpunit/phpunit": "^6.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Dframe\\Component\\Config\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sławomir Kaleta",
-                    "email": "slaszka@gmail.com"
-                }
-            ],
-            "description": "Config component Dframe",
-            "homepage": "https://dframeframework.com/en/docs/dframe/master/config/overview",
-            "keywords": [
-                "dframe",
-                "php config"
-            ],
-            "time": "2020-04-10T11:56:37+00:00"
         },
         {
             "name": "dframe/database",
@@ -152,26 +106,35 @@
         },
         {
             "name": "dframe/dframe",
-            "version": "v4.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dframe/dframe.git",
-                "reference": "8e327fd3eb700b9ca047b2e4a63968c69c85093b"
+                "reference": "45baea185f6186a639ce02f30b23fbb5cee95f7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dframe/dframe/zipball/8e327fd3eb700b9ca047b2e4a63968c69c85093b",
-                "reference": "8e327fd3eb700b9ca047b2e4a63968c69c85093b",
+                "url": "https://api.github.com/repos/dframe/dframe/zipball/45baea185f6186a639ce02f30b23fbb5cee95f7b",
+                "reference": "45baea185f6186a639ce02f30b23fbb5cee95f7b",
                 "shasum": ""
             },
             "require": {
-                "dframe/config": "^4.0",
                 "ext-json": "*",
                 "php": ">=7.3",
                 "psr/simple-cache": "^1.0"
             },
+            "replace": {
+                "dframe/config": "self.version",
+                "dframe/cron": "self.version",
+                "dframe/loader": "self.version",
+                "dframe/router": "self.version",
+                "dframe/session": "self.version",
+                "dframe/token": "self.version",
+                "dframe/view": "self.version"
+            },
             "require-dev": {
                 "kriswallsmith/assetic": "^1.4",
+                "mikey179/vfsstream": "^1.6",
                 "natxet/cssmin": "^3.0",
                 "patchwork/jsqueeze": "^2.0",
                 "phpunit/phpunit": "^8.3",
@@ -214,7 +177,7 @@
                 "mvc",
                 "php"
             ],
-            "time": "2020-08-19T14:51:20+00:00"
+            "time": "2020-08-25T19:57:06+00:00"
         },
         {
             "name": "dframe/mymail",
@@ -1961,7 +1924,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "dframe/dframe": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
