@@ -9,7 +9,7 @@
 
 namespace Controller;
 
-use Dframe\Component\Config\Config;
+use Dframe\Config\Config;
 use Dframe\Router\Response;
 
 /**
