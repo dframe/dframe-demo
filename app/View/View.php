@@ -22,7 +22,7 @@ use Dframe\View\SmartyView;
  *
  * @package View
  */
-abstract class View extends \Dframe\View
+abstract class View extends \Dframe\View\View
 {
     /**
      * @var SmartyView
