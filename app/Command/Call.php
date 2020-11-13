@@ -9,7 +9,7 @@
 
 namespace Command;
 
-use Dframe\Cli\Command;
+use Dframe\Console\Command;
 
 /**
  * Here is a description of what this file is for.

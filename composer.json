@@ -22,7 +22,7 @@
         "dframe/database": "^v2.0",
         "smarty/smarty": "^3.1",
         "dframe/mymail": "^2.0",
-        "dframe/cli": "^0.1",
+
         "ext-pdo": "*"
     },
     "autoload-dev": {
