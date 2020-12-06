@@ -21,7 +21,6 @@ return (new class() extends Task {
     {
         try {
             $lockTime = $this->lockTime('Mail', 59);
-
         } catch (Exception $e) {
             return Response::renderJSON(['code' => 200, 'message' => $e->getMessage()]);
         }
