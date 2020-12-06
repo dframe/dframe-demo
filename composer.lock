@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d35d28730f112174821dafb1771e3dc6",
+    "content-hash": "c22447670b6ac7c9d89bff646c1f7e78",
     "packages": [
         {
             "name": "dframe/database",
@@ -64,16 +64,16 @@
         },
         {
             "name": "dframe/dframe",
-            "version": "v4.1.5",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dframe/dframe.git",
-                "reference": "e8a5d9b9cac673a4d179d9ce66947e50026318fa"
+                "reference": "2ac40992d99fb1f016e917a175cd4f4dfd641e36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dframe/dframe/zipball/e8a5d9b9cac673a4d179d9ce66947e50026318fa",
-                "reference": "e8a5d9b9cac673a4d179d9ce66947e50026318fa",
+                "url": "https://api.github.com/repos/dframe/dframe/zipball/2ac40992d99fb1f016e917a175cd4f4dfd641e36",
+                "reference": "2ac40992d99fb1f016e917a175cd4f4dfd641e36",
                 "shasum": ""
             },
             "require": {
@@ -98,7 +98,7 @@
                 "phpunit/phpunit": "^8.3",
                 "ptachoire/cssembed": "^1.0",
                 "smarty/smarty": "^3.1",
-                "twig/twig": "^2.5"
+                "twig/twig": "^3.1"
             },
             "suggest": {
                 "kriswallsmith/assetic": "^1.4",
@@ -107,6 +107,7 @@
                 "ptachoire/cssembed": "^1.0",
                 "smarty/smarty": "^3.1"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -137,9 +138,9 @@
             ],
             "support": {
                 "issues": "https://github.com/dframe/dframe/issues",
-                "source": "https://github.com/dframe/dframe/tree/v4.1.5"
+                "source": "https://github.com/dframe/dframe/tree/master"
             },
-            "time": "2020-11-13T13:50:13+00:00"
+            "time": "2020-12-06T14:52:02+00:00"
         },
         {
             "name": "dframe/mymail",
@@ -2094,11 +2095,14 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "dframe/dframe": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "ext-pdo": "*"
+        "ext-pdo": "*",
+        "ext-json": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

@@ -19,7 +19,13 @@ return (new class() extends Task {
      */
     public function init()
     {
-        $lockTime = $this->lockTime('Mail', 59);
+        try {
+            $lockTime = $this->lockTime('Mail', 59);
+
+        } catch (Exception $e) {
+            return Response::renderJSON(['code' => 200, 'message' => $e->getMessage()]);
+        }
+
         if ($lockTime) {
             /**
              * Your Code

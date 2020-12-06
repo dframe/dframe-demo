@@ -13,7 +13,7 @@ return [
         'assetsDir' => 'assets',
         'assetsPath' => APP_DIR . 'View/',
         'cacheDir' => 'cache',
-        'cachePath' => APP_DIR . '../web/',
+        'cachePath' => WEB_DIR,
         'cacheUrl' => HTTP_HOST . '/',
     ],
 

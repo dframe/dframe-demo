@@ -10,6 +10,8 @@
 namespace Command;
 
 use Dframe\Console\Command;
+use Dframe\Console\InputInterface;
+use Dframe\Console\OutputInterface;
 
 /**
  * Here is a description of what this file is for.
@@ -22,9 +24,9 @@ class CallCommand extends Command
      * @param string $first
      * @param string $second
      */
-    public function help($first = '', $second = '')
+    public function execute(InputInterface $input, OutputInterface $output)
     {
-        echo 'This is example call Command from cli' . PHP_EOL;
-        echo 'Args: ' . $first . ', ' . $second;
+        $options = $input->getOptions();
+        $output->writeln('Example ' . json_encode($options));
     }
 }
